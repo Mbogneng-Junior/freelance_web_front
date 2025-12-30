@@ -6,6 +6,7 @@ import Link from "next/link";
 import { APPLICATION_NAME } from "@/app/auth/Params";
 import logo from "@public/img/MainLogo1.png";
 import {useRouter} from "next/navigation";
+import LoginForm from "@/components/auth/LoginForm";
 
 export default function LoginPage() {
     const router = useRouter();
@@ -37,7 +38,7 @@ export default function LoginPage() {
                             <h1 className="title font-bold mb-6 text-center">
                                 Sign in to {APPLICATION_NAME}
                             </h1>
-                            
+                            <LoginForm onForgottenPasswordClick={onForgottenPasswordClick} onSignUpClick={onSignUpClick}/>
                         </div>
                     </div>
 

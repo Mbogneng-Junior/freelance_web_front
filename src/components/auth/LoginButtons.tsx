@@ -1,6 +1,6 @@
-/*import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { initializeApp } from "firebase/app";
-import service from "../../../firebase/serviceAccount";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+
+
 import React, { useState } from "react";
 import {
   GoogleIcon,
@@ -8,11 +8,11 @@ import {
   YowyobIcon,
 } from "@/components/icon/socialIcon";
 import SuccessOverlay from "@/components/auth/SuccessOverlay";
-import { setAuthCookie } from "@/app/lib/firebase";
+
 import { toast } from "react-hot-toast";
 
-const app = initializeApp(service);
-const auth = getAuth(app);
+
+
 
 interface LoginButtonsState {
   isLoading: {
@@ -42,12 +42,11 @@ const LoginButtons = () => {
     const provider = new GoogleAuthProvider();
 
     try {
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-      console.log("Utilisateur connecté :", user);
       
-      // Set auth cookie
-      setAuthCookie();
+     
+      
+      
+     
       
       // Show success state and overlay
       setState(prev => ({
@@ -172,4 +171,3 @@ const LoginButtons = () => {
 };
 
 export default LoginButtons;
-*/
