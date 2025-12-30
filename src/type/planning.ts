@@ -21,6 +21,7 @@ export interface Planning extends Omit<Announcement, 'cost' | 'baggageInfo' | 's
   status: PlanningStatus;
   // Champs spécifiques au planning
   paymentOption: string;
+  baggageInfo:string;
   regularAmount: string;
   discountPercentage: string;
   discountedAmount: string;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import LoginButtons from "@/components/auth/LoginButtons";
 import LoginFormEmail from "@/components/auth/LoginFormEmail";
-import LoginFormPhone from "@/components/auth/LoginFormPhone";
+
 
 interface LoginFormProps {
   onForgottenPasswordClick: (callback: () => void) => void;
@@ -42,17 +42,12 @@ export default function LoginForm({
           Phone
         </button>
       </div>
-      {loginMethod === "email" ? (
+     
         <LoginFormEmail
           onForgottenPasswordClick={onForgottenPasswordClick}
           onSignUpClick={onSignUpClick}
         />
-      ) : (
-        <LoginFormPhone
-          onForgottenPasswordClick={onForgottenPasswordClick}
-          onSignUpClick={onSignUpClick}
-        />
-      )}
+      
     </div>
   );
 }

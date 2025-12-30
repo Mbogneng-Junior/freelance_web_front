@@ -2,7 +2,7 @@
 import { AuthModalProvider, useAuthModal } from '@/hook/AuthModalContext';
 import QuickLoginModal from "@/components/modal/QuickLoginModal";
 import QuickRegisterModal from "@/components/modal/QuickRegisterModal";
-import QuickForgotPasswordModal from "@/components/modal/QuickForgotPasswordModal";
+
 import {AuthProvider} from "@/components/context/authContext";
 import {Session} from "@/components/session/session";
 
@@ -34,7 +34,7 @@ const MainLayoutContent = ({ children }: {
 
             <QuickLoginModal isOpen={isLoginModal} onClose={closeLoginModal}/>
             <QuickRegisterModal isOpen={isRegisterModal} onClose={closeRegisterModal}/>
-            <QuickForgotPasswordModal isOpen={isForgottenPasswordModal} onClose={closeForgottenPasswordModal}/>
+            
 
         </>
     );
