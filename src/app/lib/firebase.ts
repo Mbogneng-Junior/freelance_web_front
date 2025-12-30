@@ -1,4 +1,4 @@
-
+/*
 import { initializeApp } from "firebase/app";
 import {
     getAuth,
@@ -56,4 +56,4 @@ export const setAuthCookie = async () => {
     }
   };
 
-export default app;
+export default app;*/

@@ -184,6 +184,7 @@ export default function AnnouncementsPage() {
         try {
             await announcementService.updateAnnouncement(item.id, { 
                 ...item,
+                cost: String(Number(item.cost)),
                 status: newStatus 
             });
             toast.success(

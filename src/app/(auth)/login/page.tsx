@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import LoginForm from "@/components/auth/LoginForm";
 import { APPLICATION_NAME } from "@/app/auth/Params";
 import logo from "@public/img/MainLogo1.png";
 import {useRouter} from "next/navigation";
@@ -38,7 +37,7 @@ export default function LoginPage() {
                             <h1 className="title font-bold mb-6 text-center">
                                 Sign in to {APPLICATION_NAME}
                             </h1>
-                            <LoginForm onForgottenPasswordClick={onForgottenPasswordClick} onSignUpClick={onSignUpClick}/>
+                            
                         </div>
                     </div>
 

@@ -17,6 +17,7 @@ export interface DriverProfile {
   gender?: string;
   language?: string;
   biography?: string;
+  email?: string;
 }
 
 // Ce type correspond EXACTEMENT au modèle ClientProfile.java
@@ -35,6 +36,7 @@ export interface ClientProfile {
   nationality?: string;
   gender?: string;
   language?: string;
+  email?: string;
 }
 
 // Ce type représente le contexte de session complet reçu après la connexion

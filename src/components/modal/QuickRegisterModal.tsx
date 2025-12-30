@@ -52,7 +52,7 @@ export default function QuickRegisterModal({ isOpen, onClose }:QuickRegisterModa
                     <h1 className="title font-bold mb-4 mt-2 text-center">
                         Create an account on {APPLICATION_NAME}
                     </h1>
-                    <RegisterForm onSignInClick={onSignInClick}/>
+                    
                 </div>
 
             </div>

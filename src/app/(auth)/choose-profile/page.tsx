@@ -63,7 +63,7 @@ export default function ChooseProfilePage() {
                     )}
                 </div>
 
-                <button
+               {/*<button
                     onClick={() => {
                         sessionService.logout();
                         router.push('/login');
@@ -71,7 +71,7 @@ export default function ChooseProfilePage() {
                     className="mt-8 text-red-500 font-medium hover:underline"
                 >
                     Log Out
-                </button>
+                </button>*/ } 
             </div>
         </div>
     );

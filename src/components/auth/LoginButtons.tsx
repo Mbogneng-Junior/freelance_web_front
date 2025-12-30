@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+/*import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import service from "../../../firebase/serviceAccount";
 import React, { useState } from "react";
@@ -172,3 +172,4 @@ const LoginButtons = () => {
 };
 
 export default LoginButtons;
+*/

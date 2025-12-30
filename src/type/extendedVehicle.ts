@@ -9,7 +9,7 @@ export interface ExtendedVehicle extends Partial<Omit<Vehicle, 'immatriculation'
   seats?: string;
   luggageCapacity?: string;
   transmission?: string;
-  amenities?: string;
+  amenities?: string[];
   size?: string;
   fuelType?: string;
   manufacturer?: string;

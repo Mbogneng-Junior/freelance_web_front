@@ -1,5 +1,5 @@
 // app/register/page.tsx
-"use client";
+/*"use client";
 import React from "react";
 import RegisterForm from "@/components/auth/RegisterForm";
 import Link from "next/link";
@@ -37,5 +37,16 @@ export default function RegisterPage() {
                 </Link>
             </div>
         </div>
+    );
+}
+
+*/
+
+export default function RegisterPage(){
+    return (
+
+        <div> Not implemented
+                </div>
+
     );
 }

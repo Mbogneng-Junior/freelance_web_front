@@ -12,6 +12,8 @@ import { UserSessionContext } from '@/type/profile';
 interface AuthContextType {
     user: UserSessionContext | null; // L'utilisateur connecté
     isLoading: boolean;
+    authUser: UserSessionContext | null; // alias pour compatibilité
+    authUserIsLoading: boolean; // alias pour compatibilité
     login: (creds: LoginPayload) => Promise<void>;
     logout: () => void;
     checkAuth: () => Promise<void>; // La fonction qui manquait !
@@ -82,7 +84,15 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     };
 
     return (
-        <AuthContext.Provider value={{ user, isLoading, login, logout, checkAuth }}>
+        <AuthContext.Provider value={{
+            user,
+            isLoading,
+            authUser: user,
+            authUserIsLoading: isLoading,
+            login,
+            logout,
+            checkAuth
+        }}>
             {children}
         </AuthContext.Provider>
     );

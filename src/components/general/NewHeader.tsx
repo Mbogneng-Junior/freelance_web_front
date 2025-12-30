@@ -10,7 +10,7 @@ import { useTranslations } from "next-intl";
 import { useAuthModal } from "@/hook/AuthModalContext";
 import LocaleSwitcher from "@/components/lang/LocalSwitcher";
 import { useAuthContext } from "@/components/context/authContext";
-import { MyAccountAvatar } from "@/components/general/MyAccountAvatar";
+
 import { usePathname } from "next/navigation";
 import Header from "../landingpage/Header";
 
@@ -202,13 +202,7 @@ const NewHeader = () => {
             <div className=" hidden lg:flex">
               <LocaleSwitcher status="dark" />
             </div>
-            {!authUser ? (
-              authenticationSystem
-            ) : (
-              <div className=" hidden lg:flex">
-                <MyAccountAvatar />
-              </div>
-            )}
+            
 
             <div className="lg:hidden">
               <button
@@ -248,7 +242,7 @@ const NewHeader = () => {
                   </div>
                 ))}
 
-                {!authUser ? authenticationSystemRespo : <MyAccountAvatar />}
+                
                 <LocaleSwitcher status="dark" />
               </ul>
             </div>
