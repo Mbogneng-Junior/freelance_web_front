@@ -9,26 +9,29 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 const mapBackendProductToPlanningPrivateView = (product: any): PlanningType => {
   return {
-    id: product.key?.id || product.id || '',
-    title: product.name || 'Sans titre',
-    pickupLocation: product.pickupLocation || '',
-    dropoffLocation: product.dropoffLocation || '',
-    startDate: product.startDate || '',
-    startTime: product.startTime || '',
-    endDate: product.endDate || '',
-    endTime: product.endTime || '',
-    paymentOption: product.metadata?.paymentOption,
-    regularAmount: product.metadata?.regularAmount?.toString(),
-    discountPercentage: product.metadata?.discountPercentage,
-    discountedAmount: product.metadata?.discountedAmount?.toString(),
-    status: product.status as PlanningStatus || 'Draft',
-    clientId: product.clientId || '',
-    clientName: product.clientName || '',
-    clientPhoneNumber: product.clientPhoneNumber || '',
-    profileImageUrl: product.clientProfileImageUrl || undefined,
-    isNegotiable: product.isNegotiable ?? false,
-    paymentMethod: product.paymentMethod ?? 'cash',
-  };
+  id: product.key?.id || product.id || '',
+  title: product.name || 'Sans titre',
+  pickupLocation: product.pickupLocation || '',
+  dropoffLocation: product.dropoffLocation || '',
+  startDate: product.startDate || '',
+  startTime: product.startTime || '',
+  endDate: product.endDate || '',
+  endTime: product.endTime || '',
+  paymentOption: product.metadata?.paymentOption,
+  regularAmount: product.metadata?.regularAmount?.toString(),
+  discountPercentage: product.metadata?.discountPercentage,
+  discountedAmount: product.metadata?.discountedAmount?.toString(),
+  status: product.status as PlanningStatus || 'Draft',
+  clientId: product.clientId || '',
+  clientName: product.clientName || '',
+  clientPhoneNumber: product.clientPhoneNumber || '',
+  profileImageUrl: product.clientProfileImageUrl || undefined,
+  baggageInfo:product.baggageInfo,
+
+  isNegotiable: false,
+  paymentMethod: '',
+  
+};
 };
 
 const mapPlanningFormToBackendPayload = (formData: Partial<PlanningType>) => {
