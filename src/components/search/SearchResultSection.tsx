@@ -275,8 +275,8 @@ const SearchResult = ({ results = [] }: SearchResultProps) => {
                         {filteredListings.map((item) => (
                             <SearchCardFreelance
                                 key={item.id}
-                                planning={item}
-                                onActionCompleted={() => {}}
+                                driverData={item.driverData}
+                                vehicleData={item.vehicleData}
                             />
                         ))}
 
